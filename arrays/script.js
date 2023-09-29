@@ -1,7 +1,7 @@
 //06) arrays
 //01) remove Item function
 
-function removeItem(givenArray, index) {
+/*function removeItem(givenArray, index) {
   let copyGivenArray = givenArray.slice();
   copyGivenArray.splice(index - 1, 1);
   return copyGivenArray;
@@ -40,3 +40,23 @@ function sumOfCharacters(list) {
 const arr1 = ["Luke", "Anakin", true, "Obi Wan", 333];
 console.log(sumOfCharacters(arr1));
 // result should be: 17
+*/
+
+function removeItem(givenArray, index) {
+  const copyGivenArray = givenArray.slice();
+  return copyGivenArray.splice(index - 1, 1);
+}
+
+const ainmals = ["Dog", "Cat", "Lion"];
+console.log(removeItem(["Dog", "Cat", "Lion"], 1));
+// result should be: ["Cat", "Lion"]
+
+console.log(ainmals);
+// result should be still: ["Dog", "Cat", "Lion"]
+
+const fruits = ["Watermelon", "Banana", "Cherry", "Kiwi", "Pineapple", "Apple"];
+console.log(removeItem(fruits, 3));
+// result should be: ["Watermelon", "Banana", "Kiwi", "Pineapple", "Apple"]
+
+console.log(fruits);
+// result should be still: ["Watermelon", "Banana", "Cherry", "Kiwi", "Pineapple", "Apple"]
