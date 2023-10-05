@@ -11,13 +11,26 @@ Examples
 "605"  --> 605
 "1405" --> 1405
 "-7" --> -7 */
+// =======================Lösung mit parseInt======================
 
-const stringToNumber = function (str) {
-  result = Number(str);
-  return result;
-};
-//=====================Andere Lösung======================
-
-/* const stringToNumber = function (str) {
+/* let stringToNumber = function(str) {
   return parseInt(str);
-}; */
+};
+
+/* function stringToNumber(str) {
+  return parseInt(str);
+}
+
+oder 
+// =======================Lösung mit Number======================
+const stringToNumber = function(str){   
+  return Number(str);
+}
+
+ */
+
+const stringToNumber = Number; // Warum reicht Number aus?
+console.log(stringToNumber("1234"));
+console.log(stringToNumber("605"));
+console.log(stringToNumber("1405"));
+console.log(stringToNumber("-7"));
